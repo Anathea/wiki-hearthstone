@@ -26,7 +26,7 @@ and open the template in the editor.
         <div id="page">
             <?php require '("header.php")'; ?>
 
-            <?php include '("footer.php")'; ?>
+            <?php require '("footer.php")'; ?>
         </div>
     </body>
 </html>
