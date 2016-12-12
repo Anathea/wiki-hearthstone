@@ -24,9 +24,9 @@ and open the template in the editor.
     </head>
     <body>
         <div id="page">
-            <?php include("header.php"); ?>
+            <?php require '("header.php")'; ?>
 
-            <?php include("footer.php"); ?>
+            <?php include '("footer.php")'; ?>
         </div>
     </body>
 </html>
