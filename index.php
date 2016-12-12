@@ -20,7 +20,7 @@ and open the template in the editor.
 
         <!--Tab-->
         <title>TODO supply a title</title>
-        <link rel="shortcut icon" href="img_layout/favicon.png">
+        <link rel="shortcut icon" href="img-layout/favicon.png">
     </head>
     <body>
         <div id="page">
