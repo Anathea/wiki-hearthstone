@@ -42,7 +42,7 @@ nav img {
 }
 
 #logos-classes-cartes img{
-    width: 17%;
+    width: 17.5%;
     margin-bottom: 9%;
      -webkit-transition: width 1s, height 1s, background-color 1s, -webkit-transform 1s;
   transition: width 1s, height 1s, background-color 1s, transform 1s;
@@ -62,3 +62,42 @@ nav img {
 }
 
 
+
+#logos-classes-cartes .img-voleur {
+    width: 16.5%;
+}
+
+
+#logos-classes-cartes .img-chasseur {
+    width: 15.5%;
+}
+
+
+#logos-classes-cartes .img-mage {
+    width: 16%;
+}
+
+
+#logos-classes-cartes .img-guerrier {
+    width: 16.5%;
+}
+
+
+#logos-classes-cartes .img-paladin {
+    width: 16%;
+}
+
+
+#logos-classes-cartes .img-pretre {
+    width: 16.5%;
+}
+
+
+#logos-classes-cartes .img-demoniste {
+    width: 16.5%;
+}
+
+
+#logos-classes-cartes .img-neutre {
+    width: 16%;
+}
