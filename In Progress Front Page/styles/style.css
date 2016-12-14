@@ -1,0 +1,96 @@
+@charset "UTF-8";
+
+* {
+    padding: 0;
+    margin: 0;
+}
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+
+body{
+	width: 960px;
+	margin: 0 auto;
+    overflow: hidden;
+}
+
+/*-- Logo --*/
+
+.logodiv{
+    margin: 0 auto;
+    width: 100%;
+}
+.logo{
+    width:50%;
+    margin: 0 auto;
+    margin-left: 25%;
+}
+
+/*-- Heroes --*/
+
+.hero{
+    width: 19%;
+}
+
+.herotop, .herobot{
+    margin: 0 auto;
+    position: absolute;
+    width: 62%;
+    z-index: 2;
+    left: 0;
+    right: 0;
+}
+.herotop{
+    padding-top:10%;
+    top:0;
+    transition: 1s;
+}
+.herobot{
+    padding-bottom:8%;
+    bottom:0;
+    transition: 1s;
+}
+/*-- Annimation Background --*/
+
+.bot,
+.top {
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    transition: 1s;
+}
+.top{
+    top: -149px;
+    background: url(../img-content/zzz.png) no-repeat center center;
+    height:150%;
+    width: 100%;
+    z-index: -1;
+}
+.bot{
+    bottom: 0;
+    background: url(../img-content/zzz.png) no-repeat center center;
+    height: 80%;
+    width: 100%;
+    z-index: -1;
+}
+
+button {
+    position: absolute;
+    bottom: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 30px;
+    background: #fff;
+    z-index: 5;
+}
