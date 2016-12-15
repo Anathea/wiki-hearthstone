@@ -1,6 +1,9 @@
 
 </main>
-<footer><a href="ajoutcarte.php">Ajouter une carte</a></footer>
+<footer class="ajout">
+    <a href="ajoutcarte.php" id="addcard">Ajouter une carte</a>
+     <a class="footeradmin" href="admin/cards.php" id="adminversion">Version admin</a>
+</footer>
 </body>
 </html>
 

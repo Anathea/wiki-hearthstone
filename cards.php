@@ -6,74 +6,43 @@ $page = intval($_GET['page']);
 $db = require 'db.php';
 require 'header.php';
 
+$sql = "SELECT id, nom, img, classe
+FROM kerazancards
+WHERE 1
+";
+
+if (isset($_GET['classe']) && $_GET['classe'] != "all") {
+    $sql .= "AND classe = :classe\n";
+}
+
 //Bloc récupération de données
 if(isset($_GET['mana'])){
-    if($_GET['mana'] > 0 && $_GET['mana'] <= 6){
-        $query = $db->prepare('SELECT id, nom, img, classe
-        FROM kerazancards WHERE mana = '.$_GET['mana']);
-        $query->execute();
-        $cards = $query->fetchAll();
+    if($_GET['mana'] > 0 && $_GET['mana'] <= 6) {
+        $sql .= 'AND mana = :mana';
+        $query = $db->prepare($sql);
+        $query->bindValue(':mana',$_GET['mana']);
+    } else if($_GET['mana'] >= 7) {
+        $sql .= 'AND mana >= 7';
+        $query = $db->prepare($sql);
+    } else {
+        $sql .= 'ORDER BY classe ASC, mana DESC';
+        $query = $db->prepare($sql);
     }
-    else if($_GET['mana'] >= 7){
-        $query = $db->prepare('SELECT id, nom, img, classe
-        FROM kerazancards WHERE mana >= 7');
-        $query->execute();
-        $cards = $query->fetchAll();
-    }
-    else{
-        $query = $db->prepare('SELECT id, nom, img, classe
-        FROM kerazancards
-        ORDER BY classe ASC, mana DESC');
-        $query->execute();
-        $cards = $query->fetchAll();
-    }
-}
-else if(isset($_GET['carte'])){
-    $query = $db->prepare('SELECT id, nom, img, classe
-        FROM kerazancards WHERE nom LIKE :carte');
+} else if(isset($_GET['carte'])){
+    $sql .= 'AND (nom LIKE :carte OR rarete LIKE :carte OR description LIKE :carte)';
+    $query = $db->prepare($sql);
     $query->bindValue(':carte','%'.$_GET['carte'].'%');
-    $query->execute();
 
-    $cardsName = $query->fetchAll();
-
-    $query = $db->prepare('SELECT id, nom, img, classe
-        FROM kerazancards WHERE rarete LIKE :carte');
-    $query->bindValue(':carte','%'.$_GET['carte'].'%');
-    $query->execute();
-
-    $cardsRare = $query->fetchAll();
-
-    $query = $db->prepare('SELECT id, nom, img, classe
-        FROM kerazancards WHERE description LIKE :carte');
-    $query->bindValue(':carte','%'.$_GET['carte'].'%');
-    $query->execute();
-
-    $cardsDesc = $query->fetchAll();
-
-    $cards = array();
-    if(count($cardsName)> 0){
-        foreach($cardsName as $name){
-            array_push($cards,$name);
-        }
-    }
-    if(count($cardsRare)> 0){
-        foreach($cardsRare as $rare){
-            array_push($cards,$rare);
-        }
-    }
-    if(count($cardsDesc)> 0){
-        foreach($cardsDesc as $desc){
-            array_push($cards,$desc);
-        }
-    }
+} else{
+    $sql .= 'ORDER BY classe ASC, mana DESC';
+    $query = $db->prepare($sql); //Hack page suivante
 }
-else{
-    $query = $db->prepare('SELECT id, nom, img, classe
-        FROM kerazancards
-        ORDER BY classe ASC, mana DESC'); //Hack page suivante
-    $query->execute();
-    $cards = $query->fetchAll();
+if (isset($_GET['classe']) && $_GET['classe'] != "all") {
+    $query->bindValue(':classe',$_GET['classe']);
 }
+$query->execute();
+$cards = $query->fetchAll();
+
 
 
 
