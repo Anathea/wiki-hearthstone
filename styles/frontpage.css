@@ -1,0 +1,205 @@
+@charset "UTF-8";
+
+* {
+    padding: 0;
+    margin: 0;
+}
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+
+body{
+    background-color: #DCBF85;
+    font-family: Lato;
+    width: 960px;
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3 {
+    font-family: Asul;
+}
+
+/*-- Logo --*/
+.logo1{
+    position: absolute;
+    z-index: 10;
+    width: 35%;
+    top: 0;
+    transform: translateX(-50%);
+    left:50%;
+}
+.logodiv{
+    margin: 0 auto;
+    width: 100%;
+
+}
+.logo{
+    width:50%;
+    top: 0;
+    margin: 0 auto;
+    margin-left: 25%;
+    z-index: 9;
+}
+
+/*-- Heroes --*/
+
+.hero{
+    width: 19%;
+}
+
+.herotop, .herobot{
+    margin: 0 auto;
+    position: absolute;
+    width: 62%;
+    z-index: 11;
+    left: 0;
+    right: 0;
+}
+.herotop{
+    padding-top:12%;
+    top:0;
+    transition: 1s;
+}
+.herobot{
+    padding-bottom:6%;
+    bottom:0;
+    transition: 1s;
+}
+
+/*-- Page Carte --*/
+
+.wallpaper{
+    width: 100%;
+    height: 35%;
+    z-index: -4;
+    top: -8%;
+    position: absolute;
+    left: 0;
+}
+
+
+.mana{
+    width: 4%;
+    padding-right: 8px;
+    padding-top: 5px;
+}
+
+
+#formreaserch{
+    float: left;
+    padding: 10px 408px 10px 10px;
+}
+
+.nav{ 
+    top: 30%;
+    width:100%;
+    margin-top: 30px; 
+    border: black solid 1px;
+    background-color: #7F5A47;
+    padding-top: 10px;
+    padding-bottom:10px;
+}
+
+.selection{
+    float: right;
+    border: 1px black solid;
+    height: 80%;
+    width: 20%;
+    margin-top: 1%;
+    padding: 1% 0 1% 1%;
+    background-color: #7F5A47;
+}
+
+
+.chek{
+    margin-top: 10px;
+    margin-right: 7px;
+    float: right;
+}
+
+
+label{
+    line-height: 31px;
+    padding-left: 32px;
+}
+
+.cartes img {
+    width: 90%;
+}
+
+.cartes {
+    display: inline-block;
+    width: 25%;
+}
+
+#brontis {
+    padding-top: 5%;
+    max-width: 30%;
+    float: left;
+}
+
+
+section.cartescontainer {
+   margin-top: 20px;
+    width: 80%;
+}
+
+
+.selection img {
+    width: 44%;
+    margin-left: 2px;
+}
+
+
+.descriptioncontainer{
+    width: 62%;
+    padding-top: 2%;
+    padding-left: 30%;
+}
+
+.descriptioncontainer h1 {
+    margin-bottom: 10px;
+    margin-top: -27px;
+}
+
+
+
+footer {
+    margin-top: 5%;
+    height: 40px;
+    background-color: #3D3117;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+
+#adminversion {
+    padding-top: 10px;
+    position: absolute;
+    left: 55%;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+
+#addcard {
+    position: absolute;
+    padding-top: 10px;
+    left: 35%;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
