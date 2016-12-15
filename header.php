@@ -28,7 +28,10 @@
                 echo "<a href='/cards.php?mana=".$i."' class='mana".$i."'> <img class='mana' src='img-layout/mana_".$i.".png' alt=''></a>";
             }
             ?>
+            <a href="/cards.php" class="mana_retour"> <img src="img-layout/mana_retour.png" class="mana"></a>
         </div>
+
+
         <aside class="selection clearfix">
             <form action="" id="Select">
                 <img src="img-layout/icone-voleur.png" alt=""><label for="voleur">Voleur</label> <input type="checkbox" class="chek" id="voleur"> <br>

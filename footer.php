@@ -1,5 +1,3 @@
-</section>
-
 
 </main>
 <footer><a href="ajoutcarte.php">Ajouter une carte</a></footer>
