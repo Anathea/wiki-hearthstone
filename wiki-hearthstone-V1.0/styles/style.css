@@ -1,0 +1,160 @@
+@charset "UTF-8";
+
+* {
+    padding: 0;
+    margin: 0;
+}
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+
+body {
+    background-color: #DCBF85;
+    font-family: Asul;
+    width: 960px;
+    margin: 0 auto;
+}
+
+/*-- Logo --*/
+.logo1{
+    position: absolute;
+    z-index: 10;
+    width: 35%;
+    top: 0;
+    transform: translateX(-50%);
+    left:50%;
+}
+.logodiv{
+    margin: 0 auto;
+    width: 100%;
+
+}
+.logo{
+    width:50%;
+    top: 0;
+    margin: 0 auto;
+    margin-left: 25%;
+    z-index: 9;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 40px;
+}
+
+a:visited {
+    color: #000;
+}
+/*-- Page Carte --*/
+
+.wallpaper{
+    width: 100%;
+    height: 300px;
+    z-index: -4;
+    top: -8%;
+    position: absolute;
+    left: 0;
+}
+
+.message {
+    background-color: rgba(255, 255, 255, 0.4);
+    width: 960px;
+    height: 60px;
+    margin-top: 90px;
+    text-align: center;
+    font-size: 30px;
+    padding-top: 2px;
+}
+
+section {
+    width: 960px;
+    margin-top: 1%;
+    padding: 3%;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.cartes img {
+     width: 240px;
+     height: 345px;
+    padding-top: 17px;
+}
+
+.cartes {
+    float: left;
+    width: 25%;
+    margin-bottom: 1%
+}
+
+.fleches {
+    clear: both;
+    width: 960px;
+    height: 60px;
+    font-size: 23px;
+}
+
+.precedent {
+    margin-left: 300px;
+    text-decoration: none;
+    color: #000;
+}
+
+.suivant {
+    margin-left: 50px;
+    text-decoration: none;
+    color: #000;
+}
+.descriptioncontainer{
+    width: 60%;
+    padding-top: 2%;
+    padding-left: 30%;
+}
+
+.cartescontainer{
+    width:80%;
+}
+
+footer {
+    width: 960px;
+    height: 60px;
+    line-height: 60px;
+}
+
+footer .ajout {
+    margin-left: 336px;
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+}
+
+.footeradmin{
+    margin-left: 40px;
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+}
+
+
+
+
+
+
+h2 {
+    margin: 15px;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+
+form div {
+    margin: 10px;
+}
