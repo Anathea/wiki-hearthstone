@@ -1,0 +1,71 @@
+@charset "UTF-8";
+
+* {
+    padding: 0;
+    margin: 0;
+}
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+
+body{
+    font-family: Lato;
+    width: 960px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.top{
+    top: 0;
+    background: url(../img-content/zzz.png) no-repeat center center;
+    height:100%;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    right: 0;
+}
+.hero{
+    width: 19%;
+}
+.herotop{
+    margin: 0 auto;
+    position: absolute;
+    width: 62%;
+    left: 0;
+    right: 0;
+    padding-top: 3%;
+}
+
+.logodiv{
+    margin: 0 auto;
+    width: 100%;
+    z-index: 10;
+
+}
+.logo{
+    width:50%;
+    top: 0;
+    margin: 0 auto;
+    margin-left: 25%;
+    z-index: 10;
+}
+
+button{
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 30px;
+    background: #fff;
+    z-index: 11;
+}
